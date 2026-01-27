@@ -14,6 +14,9 @@ importers:
       '@fontsource/alan-sans':
         specifier: ^5.2.2
         version: 5.2.2
+      '@fontsource/amethysta':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.16
         version: 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.10))(@types/react@19.2.10)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -216,6 +219,9 @@ packages:
 
   '@fontsource/alan-sans@5.2.2':
     resolution: {integrity: sha512-QoRKjLjw7I8lgk9A/nKnQckW9PpIkfcerwzSvG7Ta2SpUJiNcU0kkzTPd7w9khKnP9UTJafInEAJXZFMdbIyWg==}
+
+  '@fontsource/amethysta@5.2.8':
+    resolution: {integrity: sha512-9RGTQTCOc0TBBIJPFqGp2x+zx6+r1xSgOJf62t8IpGD2obOiZYinvzsKBAkR1XR9s9KzSbWTtukACCioD+yiIg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2561,6 +2567,8 @@ snapshots:
   '@fontsource-variable/fira-code@5.2.7': {}
 
   '@fontsource/alan-sans@5.2.2': {}
+
+  '@fontsource/amethysta@5.2.8': {}
 
   '@humanfs/core@0.19.1': {}
 
