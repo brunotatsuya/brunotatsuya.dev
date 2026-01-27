@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Menu } from 'lucide-react'
 
-import { ThemeToggle } from '@/components/theme-toggle'
+import { ThemeToggle } from '@/components/themes/theme-toggle'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,

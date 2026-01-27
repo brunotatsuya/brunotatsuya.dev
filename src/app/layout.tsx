@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import '@/styles/animations.css'
-import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeProvider } from '@/components/themes/theme-provider'
 import { alanSans, amethysta, firaCode } from '@/styles/fonts'
 
 export { metadata } from './metadata'
