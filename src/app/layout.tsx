@@ -16,7 +16,7 @@ export default function RootLayout({
       className={`${alanSans.variable} ${amethysta.variable} ${firaCode.variable}`}
     >
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
       </body>

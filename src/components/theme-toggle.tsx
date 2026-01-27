@@ -10,7 +10,7 @@ export function ThemeToggle() {
   const [isTransitioning, setIsTransitioning] = useState(false)
   const { theme, setTheme } = useTheme()
 
-  const Icon = theme === 'dark' ? Moon : Sun
+  const Icon = theme === 'light' ? Sun : Moon
 
   const handleToggle = () => {
     if (isTransitioning) return
