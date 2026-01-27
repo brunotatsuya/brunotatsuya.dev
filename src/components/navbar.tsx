@@ -15,7 +15,7 @@ import {
 
 export function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-md">
+    <header className="border-border/40 bg-background/70 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -46,7 +46,7 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
-            <DropdownMenu>
+          <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="default" size="icon" className="rounded-full">
                 <Menu className="size-5" />
@@ -61,7 +61,7 @@ export function Navbar() {
                 <Link href="#contact">Contact</Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem asChild className="font-semibold text-primary">
+              <DropdownMenuItem asChild className="text-primary font-semibold">
                 <Link href="/resume.pdf" download>
                   Resume
                 </Link>
