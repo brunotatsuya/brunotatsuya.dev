@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/styles/globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { alanSans, amethysta, firaCode } from './fonts'
 
