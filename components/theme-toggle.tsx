@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
+import { useEffect, useState } from 'react'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false)
@@ -13,13 +13,13 @@ export function ThemeToggle() {
 
   useEffect(() => setMounted(true), [])
 
-  const Icon = mounted && theme === "dark" ? Moon : Sun
+  const Icon = mounted && theme === 'dark' ? Moon : Sun
 
   const handleToggle = () => {
     if (!mounted || isTransitioning) return
 
     setIsTransitioning(true)
-    setTheme(theme === "dark" ? "light" : "dark")
+    setTheme(theme === 'dark' ? 'light' : 'dark')
 
     setTimeout(() => {
       setIsTransitioning(false)

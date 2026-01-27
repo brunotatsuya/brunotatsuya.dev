@@ -1,13 +1,13 @@
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { alanSans, amethysta, firaCode } from "./fonts";
+import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
+import { alanSans, amethysta, firaCode } from './fonts'
 
-export { metadata } from "./metadata";
+export { metadata } from './metadata'
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html
@@ -21,5 +21,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
