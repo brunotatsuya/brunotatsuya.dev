@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --theme-transition-duration: 150ms;
   --background: oklch(0.9350 0.0148 290.2965);
   --foreground: oklch(0.2862 0.0327 286.6780);
   --card: oklch(0.9350 0.0148 290.2965);
@@ -166,6 +167,12 @@
   --tracking-wide: calc(var(--tracking-normal) + 0.025em);
   --tracking-wider: calc(var(--tracking-normal) + 0.05em);
   --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+}
+
+* {
+  transition: background-color var(--theme-transition-duration) ease-in-out,
+              color var(--theme-transition-duration) ease-in-out,
+              border-color var(--theme-transition-duration) ease-in-out;
 }
 
 body {
