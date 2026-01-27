@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import '@/styles/animations.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { alanSans, amethysta, firaCode } from '@/styles/fonts'
 
@@ -16,7 +17,7 @@ export default function RootLayout({
       className={`${alanSans.variable} ${amethysta.variable} ${firaCode.variable}`}
     >
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" enableSystem>
           {children}
         </ThemeProvider>
       </body>

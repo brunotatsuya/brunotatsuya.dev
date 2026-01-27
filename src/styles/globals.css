@@ -179,13 +179,6 @@
   --tracking-widest: calc(var(--tracking-normal) + 0.1em);
 }
 
-* {
-  transition:
-    background-color var(--theme-transition-duration) ease-in-out,
-    color var(--theme-transition-duration) ease-in-out,
-    border-color var(--theme-transition-duration) ease-in-out;
-}
-
 body {
   letter-spacing: var(--tracking-normal);
 }

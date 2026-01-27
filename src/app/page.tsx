@@ -1,15 +1,10 @@
-import { ThemeToggle } from '@/components/theme-toggle'
+import { Navbar } from '@/components/navbar'
 
 export default function Home() {
   return (
     <div className="bg-background min-h-screen">
-      <header className="border-b">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <h1 className="text-2xl font-bold">My App</h1>
-          <ThemeToggle />
-        </div>
-      </header>
-      <main className="container mx-auto px-4 py-8">
+      <Navbar />
+      <main className="container mx-auto px-4 pb-8 pt-24">
         <h2 className="mb-4 text-3xl font-bold">Welcome!</h2>
         <p className="text-muted-foreground mb-4">
           Click the theme toggle in the header to switch between light, dark,
