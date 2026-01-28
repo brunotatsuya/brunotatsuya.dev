@@ -16,17 +16,17 @@ import {
 export function Navbar() {
   return (
     <header className="border-border/40 bg-background/70 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="flex h-16 w-full items-center justify-between px-8 md:px-12 lg:px-16">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/favicon.png"
             alt="brunotatsuya.dev"
-            width={22}
-            height={22}
+            width={28}
+            height={28}
             className="rounded-sm"
             priority
           />
-          <span className="text-base font-semibold tracking-wide">
+          <span className="hidden text-base font-semibold tracking-wide md:inline">
             brunotatsuya.dev
           </span>
         </Link>
