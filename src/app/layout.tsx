@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import '@/styles/animations.css'
 import { ThemeProvider } from '@/components/themes/theme-provider'
+import { I18nProvider } from '@/components/languages/i18n-provider'
 import { alanSans, amethysta, firaCode } from '@/styles/fonts'
 
 export { metadata } from './metadata'
@@ -18,7 +19,7 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider attribute="class" enableSystem>
-          {children}
+          <I18nProvider>{children}</I18nProvider>
         </ThemeProvider>
       </body>
     </html>

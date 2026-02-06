@@ -1,0 +1,30 @@
+{
+  "navbar": {
+    "title": "brunotatsuya.dev",
+    "about": "About",
+    "contact": "Contact",
+    "resume": "Resume",
+    "openMenu": "Open menu"
+  },
+  "index": {
+    "presentation": {
+      "name": "Bruno Tatsuya",
+      "role": "Software Engineer",
+      "description": "Architecting reliable systems that scale and deliver real impact."
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "hello there",
+      "description": "Hi, I'm Bruno! I'm a software developer and computer scientist with 6 years of experience, based in France. Also an enthusiast in automation. Currently working as a Software Engineer at Qonto, I believe technology should be used to make people's lives easier.",
+      "tabs": {
+        "programming": "Programming",
+        "tools": "Tools",
+        "infra": "Infra & DevOps"
+      },
+      "columns": {
+        "languages": "Languages",
+        "frameworks": "Frameworks"
+      }
+    }
+  }
+}
