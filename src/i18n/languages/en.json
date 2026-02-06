@@ -14,16 +14,12 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "hello there",
-      "description": "Hi, I'm Bruno! I'm a software developer and computer scientist with 6 years of experience, based in France. Also an enthusiast in automation. Currently working as a Software Engineer at Qonto, I believe technology should be used to make people's lives easier.",
+      "title": "Hello there",
+      "description": "Hi, I'm <strong>Bruno</strong>! I'm a software developer and computer scientist with 6 years of experience, based in France. Also an enthusiast in automation. Currently working as a Software Engineer at <qonto>Qonto</qonto>, I believe technology should be used to make people's lives easier.",
       "tabs": {
         "programming": "Programming",
-        "tools": "Tools",
-        "infra": "Infra & DevOps"
-      },
-      "columns": {
-        "languages": "Languages",
-        "frameworks": "Frameworks"
+        "tools": "Solutions",
+        "infra": "DevOps"
       }
     }
   }

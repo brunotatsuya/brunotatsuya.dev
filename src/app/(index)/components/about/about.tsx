@@ -1,6 +1,6 @@
 'use client'
 
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 import { SkillsGrid } from './skills-grid'
 
@@ -17,11 +17,24 @@ export function About() {
           <span className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
             {t('index.about.eyebrow')}
           </span>
-          <h2 className="text-foreground font-sans text-4xl font-semibold tracking-tight md:text-5xl">
+          <h2 className="font-sans text-4xl font-semibold tracking-tight md:text-5xl">
             {t('index.about.title')}
           </h2>
           <p className="text-muted-foreground text-sm leading-relaxed md:text-base">
-            {t('index.about.description')}
+            <Trans
+              i18nKey="index.about.description"
+              components={{
+                strong: <strong className="text-foreground font-semibold" />,
+                qonto: (
+                  <a
+                    href="https://qonto.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary relative inline-block no-underline after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-[width] after:duration-300 hover:after:w-full"
+                  />
+                ),
+              }}
+            />
           </p>
         </div>
         <div className="flex w-full flex-col gap-6 md:flex-1">

@@ -2,44 +2,66 @@ export type Skill = {
   name: string
   logo: string
   alt: string
+  imageClassName?: string
 }
 
 export const languageSkills: Skill[] = [
-  { name: 'Ruby', logo: '/logos/ruby.png', alt: 'Ruby' },
-  { name: 'Go/Golang', logo: '/logos/go.png', alt: 'Go' },
-  { name: 'Python', logo: '/logos/python.png', alt: 'Python' },
-  { name: 'TypeScript/JavaScript', logo: '/logos/typescript.png', alt: 'TypeScript' },
+  { name: 'Ruby', logo: '/logos/ruby.svg', alt: 'Ruby' },
+  { name: 'Golang', logo: '/logos/go.svg', alt: 'Go' },
+  { name: 'Python', logo: '/logos/python.svg', alt: 'Python' },
+  { name: 'TypeScript', logo: '/logos/typescript.svg', alt: 'TypeScript' },
 ]
 
 export const frameworkSkills: Skill[] = [
-  { name: 'Ruby on Rails', logo: '/logos/rails.png', alt: 'Ruby on Rails' },
+  {
+    name: 'Ruby on Rails',
+    logo: '/logos/ruby-on-rails.svg',
+    alt: 'Ruby on Rails',
+  },
   { name: 'Gin', logo: '/logos/gin.png', alt: 'Gin' },
-  { name: 'FastAPI', logo: '/logos/fastapi.png', alt: 'FastAPI' },
-  { name: 'Node.js', logo: '/logos/node.png', alt: 'Node.js' },
+  { name: 'FastAPI', logo: '/logos/fastapi.svg', alt: 'FastAPI' },
+  { name: 'Node.js', logo: '/logos/nodejs.png', alt: 'Node.js' },
 ]
 
 export const toolsSkills: Skill[] = [
-  { name: 'Kafka', logo: '/logos/kafka.png', alt: 'Kafka' },
-  { name: 'Redis', logo: '/logos/redis.png', alt: 'Redis' },
-  { name: 'PostgreSQL', logo: '/logos/postgresql.png', alt: 'PostgreSQL' },
-  { name: 'MongoDB', logo: '/logos/mongodb.png', alt: 'MongoDB' },
-  { name: 'GraphQL', logo: '/logos/graphql.png', alt: 'GraphQL' },
-  { name: 'ELK (Elasticsearch, Logstash, Kibana)', logo: '/logos/elk.png', alt: 'ELK' },
-  { name: 'Prometheus', logo: '/logos/prometheus.png', alt: 'Prometheus' },
+  { name: 'PostgreSQL', logo: '/logos/postgresql.svg', alt: 'PostgreSQL' },
   { name: 'Nginx', logo: '/logos/nginx.png', alt: 'Nginx' },
+  { name: 'Redis', logo: '/logos/redis.svg', alt: 'Redis' },
+  { name: 'GraphQL', logo: '/logos/graphql.svg', alt: 'GraphQL' },
+  {
+    name: 'Kafka',
+    logo: '/logos/kafka.svg',
+    alt: 'Kafka',
+    imageClassName: 'invert-0 in-[.dark]:invert',
+  },
+  {
+    name: 'ELK',
+    logo: '/logos/elk.svg',
+    alt: 'ELK',
+  },
+  { name: 'MongoDB', logo: '/logos/mongodb.svg', alt: 'MongoDB' },
+  { name: 'Prometheus', logo: '/logos/prometheus.svg', alt: 'Prometheus' },
 ]
 
 export const infraSkills: Skill[] = [
-  { name: 'AWS (RDS, SQS, EKS, EC2, S3, IAM, SSM)', logo: '/logos/aws.png', alt: 'AWS' },
   {
-    name: 'GCP (Cloud Run, Cloud Storage, Cloud SQL, GKE, Pub/Sub, IAM)',
-    logo: '/logos/gcp.png',
+    name: 'AWS',
+    logo: '/logos/aws.svg',
+    alt: 'AWS',
+  },
+  { name: 'Terraform', logo: '/logos/terraform.svg', alt: 'Terraform' },
+  {
+    name: 'GCP',
+    logo: '/logos/gcp.svg',
     alt: 'GCP',
   },
-  { name: 'Terraform', logo: '/logos/terraform.png', alt: 'Terraform' },
-  { name: 'Docker', logo: '/logos/docker.png', alt: 'Docker' },
-  { name: 'Kubernetes', logo: '/logos/kubernetes.png', alt: 'Kubernetes' },
-  { name: 'ArgoCD', logo: '/logos/argocd.png', alt: 'ArgoCD' },
-  { name: 'Git', logo: '/logos/git.png', alt: 'Git' },
-  { name: 'CI/CD (Jenkins, GitHub Actions)', logo: '/logos/cicd.png', alt: 'CI/CD' },
+  { name: 'ArgoCD', logo: '/logos/argocd.svg', alt: 'ArgoCD' },
+  { name: 'Docker', logo: '/logos/docker.svg', alt: 'Docker' },
+  {
+    name: 'CI/CD',
+    logo: '/logos/jenkins.svg',
+    alt: 'CI/CD',
+  },
+  { name: 'Kubernetes', logo: '/logos/kubernetes.svg', alt: 'Kubernetes' },
+  { name: 'Git', logo: '/logos/git.svg', alt: 'Git' },
 ]

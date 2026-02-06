@@ -33,15 +33,9 @@ export function SkillsGrid() {
       </TabsList>
 
       <TabsContent value="programming">
-        <Card>
-          <CardHeader>
-            <CardTitle>{t('index.about.tabs.programming')}</CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-6 md:grid-cols-2">
+        <Card className="p-6">
+          <CardContent className="grid gap-3 p-0 md:grid-cols-2">
             <div className="flex flex-col gap-3">
-              <p className="text-muted-foreground text-xs uppercase tracking-widest">
-                {t('index.about.columns.languages')}
-              </p>
               <ul className="grid gap-3">
                 {languageSkills.map((skill) => (
                   <li key={skill.name}>
@@ -52,7 +46,7 @@ export function SkillsGrid() {
                           alt={skill.alt}
                           width={20}
                           height={20}
-                          className="h-5 w-5 object-contain"
+                          className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
                         />
                       </span>
                       <span className="text-foreground text-sm">
@@ -64,9 +58,6 @@ export function SkillsGrid() {
               </ul>
             </div>
             <div className="flex flex-col gap-3">
-              <p className="text-muted-foreground text-xs uppercase tracking-widest">
-                {t('index.about.columns.frameworks')}
-              </p>
               <ul className="grid gap-3">
                 {frameworkSkills.map((skill) => (
                   <li key={skill.name}>
@@ -77,7 +68,7 @@ export function SkillsGrid() {
                           alt={skill.alt}
                           width={20}
                           height={20}
-                          className="h-5 w-5 object-contain"
+                          className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
                         />
                       </span>
                       <span className="text-foreground text-sm">
@@ -93,11 +84,8 @@ export function SkillsGrid() {
       </TabsContent>
 
       <TabsContent value="tools">
-        <Card>
-          <CardHeader>
-            <CardTitle>{t('index.about.tabs.tools')}</CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-3">
+        <Card className="p-6">
+          <CardContent className="grid gap-3 p-0 md:grid-cols-2">
             {toolsSkills.map((skill) => (
               <InnerCard key={skill.name} className="flex items-center gap-3">
                 <span className="bg-muted flex size-9 items-center justify-center rounded-md">
@@ -106,7 +94,7 @@ export function SkillsGrid() {
                     alt={skill.alt}
                     width={20}
                     height={20}
-                    className="h-5 w-5 object-contain"
+                    className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
                   />
                 </span>
                 <span className="text-foreground text-sm">{skill.name}</span>
@@ -117,11 +105,8 @@ export function SkillsGrid() {
       </TabsContent>
 
       <TabsContent value="infra">
-        <Card>
-          <CardHeader>
-            <CardTitle>{t('index.about.tabs.infra')}</CardTitle>
-          </CardHeader>
-          <CardContent className="grid gap-3">
+        <Card className="p-6">
+          <CardContent className="grid gap-3 p-0 md:grid-cols-2">
             {infraSkills.map((skill) => (
               <InnerCard key={skill.name} className="flex items-center gap-3">
                 <span className="bg-muted flex size-9 items-center justify-center rounded-md">
@@ -130,7 +115,7 @@ export function SkillsGrid() {
                     alt={skill.alt}
                     width={20}
                     height={20}
-                    className="h-5 w-5 object-contain"
+                    className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
                   />
                 </span>
                 <span className="text-foreground text-sm">{skill.name}</span>

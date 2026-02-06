@@ -14,16 +14,12 @@
     },
     "about": {
       "eyebrow": "Sobre",
-      "title": "hello there",
-      "description": "Oi, eu sou o Bruno! Sou desenvolvedor de software e cientista da computação com 6 anos de experiência, baseado na França. Também sou entusiasta em automação. Atualmente trabalho como Engenheiro de Software na Qonto e acredito que a tecnologia deve ser usada para tornar a vida das pessoas mais fácil.",
+      "title": "olá",
+      "description": "Oi, eu sou o <strong>Bruno</strong>! Sou desenvolvedor de software e cientista da computação com 6 anos de experiência, baseado na França. Também sou entusiasta em automação. Atualmente trabalho como Engenheiro de Software na <qonto>Qonto</qonto> e acredito que a tecnologia deve ser usada para tornar a vida das pessoas mais fácil.",
       "tabs": {
         "programming": "Programação",
-        "tools": "Ferramentas",
-        "infra": "Infra & DevOps"
-      },
-      "columns": {
-        "languages": "Linguagens",
-        "frameworks": "Frameworks"
+        "tools": "Soluções",
+        "infra": "DevOps"
       }
     }
   }
