@@ -13,7 +13,7 @@ export function About() {
       id="about"
       className="bg-background relative min-h-dvh scroll-mt-4 font-mono"
     >
-      <div className="relative mx-auto flex min-h-dvh w-full max-w-6xl flex-col gap-12 px-8 pt-24 pb-20 md:flex-row md:items-start md:gap-20 md:px-12 lg:px-16">
+      <div className="relative mx-auto flex min-h-dvh w-full max-w-6xl flex-col gap-12 px-8 pt-14 pb-16 md:flex-row md:items-start md:gap-20 md:px-12 md:pt-24 md:pb-20 lg:px-16">
         <BlurReveal className="flex flex-col gap-6 md:w-6/12">
           <span className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
             {t('index.about.eyebrow')}
