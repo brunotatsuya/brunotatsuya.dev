@@ -12,8 +12,8 @@ export function About() {
       id="about"
       className="bg-background relative min-h-dvh scroll-mt-4 font-mono"
     >
-      <div className="relative mx-auto flex min-h-dvh w-full max-w-6xl flex-col gap-12 px-8 pt-24 pb-20 md:flex-row md:items-start md:gap-16 md:px-12 lg:px-16">
-        <div className="flex flex-col gap-6 md:w-5/12">
+      <div className="relative mx-auto flex min-h-dvh w-full max-w-6xl flex-col gap-12 px-8 pt-24 pb-20 md:flex-row md:items-start md:gap-20 md:px-12 lg:px-16">
+        <div className="flex flex-col gap-6 md:w-6/12">
           <span className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
             {t('index.about.eyebrow')}
           </span>
@@ -37,7 +37,7 @@ export function About() {
             />
           </p>
         </div>
-        <div className="flex w-full flex-col gap-6 md:flex-1">
+        <div className="flex w-full flex-col gap-6 md:w-6/12 md:flex-none">
           <SkillsGrid />
         </div>
       </div>

@@ -1,129 +1,88 @@
 'use client'
 
 import Image from 'next/image'
+import { useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  InnerCard,
-} from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import LogoLoop, { type LogoItem } from '@/components/LogoLoop'
 
 import {
-  frameworkSkills,
+  programmingSkills,
   infraSkills,
-  languageSkills,
   toolsSkills,
+  type Skill,
 } from './skills'
 
 export function SkillsGrid() {
   const { t } = useTranslation()
 
+  const makeLogoItems = useCallback(
+    (skills: Skill[]): LogoItem[] =>
+      skills.map((skill) => ({
+        ariaLabel: skill.name,
+        title: skill.name,
+        node: (
+          <span className="text-foreground inline-flex items-center gap-0 text-sm font-normal tracking-[0.05em] md:text-base">
+            <span className="flex size-10 items-center justify-center">
+              <Image
+                src={skill.logo}
+                alt={skill.alt}
+                width={22}
+                height={22}
+                className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
+              />
+            </span>
+            <span className="tracking-normal">{skill.name}</span>
+          </span>
+        ),
+      })),
+    []
+  )
+
+  const sections = useMemo(
+    () => [
+      {
+        id: 'programming',
+        title: t('index.about.tabs.programming'),
+        items: makeLogoItems(programmingSkills),
+      },
+      {
+        id: 'tools',
+        title: t('index.about.tabs.tools'),
+        items: makeLogoItems(toolsSkills),
+      },
+      {
+        id: 'infra',
+        title: t('index.about.tabs.infra'),
+        items: makeLogoItems(infraSkills),
+      },
+    ],
+    [makeLogoItems, t]
+  )
+
   return (
-    <Tabs defaultValue="programming">
-      <TabsList className="justify-start">
-        <TabsTrigger value="programming">
-          {t('index.about.tabs.programming')}
-        </TabsTrigger>
-        <TabsTrigger value="tools">{t('index.about.tabs.tools')}</TabsTrigger>
-        <TabsTrigger value="infra">{t('index.about.tabs.infra')}</TabsTrigger>
-      </TabsList>
-
-      <TabsContent value="programming">
-        <Card className="p-6">
-          <CardContent className="grid gap-3 p-0 md:grid-cols-2">
-            <div className="flex flex-col gap-3">
-              <ul className="grid gap-3">
-                {languageSkills.map((skill) => (
-                  <li key={skill.name}>
-                    <InnerCard className="flex items-center gap-3">
-                      <span className="bg-muted flex size-9 items-center justify-center rounded-md">
-                        <Image
-                          src={skill.logo}
-                          alt={skill.alt}
-                          width={20}
-                          height={20}
-                          className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
-                        />
-                      </span>
-                      <span className="text-foreground text-sm">
-                        {skill.name}
-                      </span>
-                    </InnerCard>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex flex-col gap-3">
-              <ul className="grid gap-3">
-                {frameworkSkills.map((skill) => (
-                  <li key={skill.name}>
-                    <InnerCard className="flex items-center gap-3">
-                      <span className="bg-muted flex size-9 items-center justify-center rounded-md">
-                        <Image
-                          src={skill.logo}
-                          alt={skill.alt}
-                          width={20}
-                          height={20}
-                          className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
-                        />
-                      </span>
-                      <span className="text-foreground text-sm">
-                        {skill.name}
-                      </span>
-                    </InnerCard>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
-      </TabsContent>
-
-      <TabsContent value="tools">
-        <Card className="p-6">
-          <CardContent className="grid gap-3 p-0 md:grid-cols-2">
-            {toolsSkills.map((skill) => (
-              <InnerCard key={skill.name} className="flex items-center gap-3">
-                <span className="bg-muted flex size-9 items-center justify-center rounded-md">
-                  <Image
-                    src={skill.logo}
-                    alt={skill.alt}
-                    width={20}
-                    height={20}
-                    className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
-                  />
-                </span>
-                <span className="text-foreground text-sm">{skill.name}</span>
-              </InnerCard>
-            ))}
-          </CardContent>
-        </Card>
-      </TabsContent>
-
-      <TabsContent value="infra">
-        <Card className="p-6">
-          <CardContent className="grid gap-3 p-0 md:grid-cols-2">
-            {infraSkills.map((skill) => (
-              <InnerCard key={skill.name} className="flex items-center gap-3">
-                <span className="bg-muted flex size-9 items-center justify-center rounded-md">
-                  <Image
-                    src={skill.logo}
-                    alt={skill.alt}
-                    width={20}
-                    height={20}
-                    className={`h-5 w-5 object-contain ${skill.imageClassName ?? ''}`}
-                  />
-                </span>
-                <span className="text-foreground text-sm">{skill.name}</span>
-              </InnerCard>
-            ))}
-          </CardContent>
-        </Card>
-      </TabsContent>
-    </Tabs>
+    <div className="flex w-full flex-col gap-8">
+      {sections.map((section, index) => (
+        <div key={section.id} className="flex flex-col gap-4">
+          <div className="flex items-center justify-between gap-4">
+            <h3 className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
+              {section.title}
+            </h3>
+            <span className="bg-border/70 h-px flex-1" />
+          </div>
+          <LogoLoop
+            logos={section.items}
+            speed={32}
+            direction={index === 1 ? 'right' : 'left'}
+            gap={44}
+            logoHeight={32}
+            fadeOut
+            fadeOutColor="var(--background)"
+            ariaLabel={`${section.title} logos`}
+            className="bg-background overflow-hidden rounded-2xl px-0.5 py-2"
+          />
+        </div>
+      ))}
+    </div>
   )
 }
