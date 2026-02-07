@@ -17,7 +17,11 @@ import {
 } from '@/components/ui/dropdown-menu'
 
 export function Navbar() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const resumeHref =
+    i18n.language === 'en'
+      ? '/resumes/en/bruno-tatsuya.pdf'
+      : '/resumes/pt-br/bruno-tatsuya.pdf'
 
   return (
     <header className="border-border/40 bg-background/70 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md">
@@ -43,7 +47,7 @@ export function Navbar() {
             <Link href="#contact">{t('navbar.contact')}</Link>
           </Button>
           <Button asChild variant="ghost" size="default">
-            <Link href="/resume.pdf" download>
+            <Link href={resumeHref} target="_blank" rel="noopener noreferrer">
               {t('navbar.resume')}
             </Link>
           </Button>
@@ -70,7 +74,11 @@ export function Navbar() {
                 <Link href="#contact">{t('navbar.contact')}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/resume.pdf" download>
+                <Link
+                  href={resumeHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t('navbar.resume')}
                 </Link>
               </DropdownMenuItem>
