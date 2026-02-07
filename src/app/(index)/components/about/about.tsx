@@ -37,7 +37,7 @@ export function About() {
                     href="https://qonto.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-primary relative inline-block no-underline after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-[width] after:duration-300 hover:after:w-full"
+                    className="text-primary relative inline-block no-underline after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current after:transition-[width] after:duration-300 hover:after:w-full"
                   />
                 ),
               }}

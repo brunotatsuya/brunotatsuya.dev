@@ -37,7 +37,9 @@ export function Presentation() {
                   underline: (
                     <span
                       className={
-                        graphReady ? 'hand-underline hand-underline--draw' : 'hand-underline'
+                        graphReady
+                          ? 'hand-underline hand-underline--draw'
+                          : 'hand-underline'
                       }
                     />
                   ),

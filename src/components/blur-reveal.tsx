@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import type { Variants } from 'motion/react'
 import type { ReactNode } from 'react'
 
 const blurContainer = (stagger: number) => ({
@@ -8,13 +9,13 @@ const blurContainer = (stagger: number) => ({
   show: { transition: { staggerChildren: stagger } },
 })
 
-const blurItem = {
+const blurItem: Variants = {
   hidden: { opacity: 0, filter: 'blur(12px)', y: 12 },
   show: {
     opacity: 1,
     filter: 'blur(0px)',
     y: 0,
-    transition: { duration: 0.8, ease: 'easeOut' },
+    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] },
   },
 }
 
@@ -29,7 +30,18 @@ type BlurRevealProps = {
 type BlurRevealItemProps = {
   children: ReactNode
   className?: string
-  as?: keyof JSX.IntrinsicElements
+  as?: BlurRevealTag
+}
+
+type BlurRevealTag = 'div' | 'h1' | 'h2' | 'h3' | 'p' | 'span'
+
+const motionTags: Record<BlurRevealTag, typeof motion.div> = {
+  div: motion.div,
+  h1: motion.h1,
+  h2: motion.h2,
+  h3: motion.h3,
+  p: motion.p,
+  span: motion.span,
 }
 
 export function BlurReveal({
@@ -57,7 +69,7 @@ export function BlurRevealItem({
   className,
   as = 'div',
 }: BlurRevealItemProps) {
-  const MotionComponent = motion(as)
+  const MotionComponent = motionTags[as]
 
   return (
     <MotionComponent className={className} variants={blurItem}>

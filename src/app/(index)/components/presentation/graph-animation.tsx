@@ -375,8 +375,7 @@ const drawPath = (
 const drawNode = (
   ctx: CanvasRenderingContext2D,
   node: Node,
-  color: string,
-  opacity: number
+  color: string
 ): void => {
   ctx.beginPath()
   ctx.fillStyle = color
@@ -463,6 +462,11 @@ export default function GraphAnimation({
   })
   const animationRef = useRef<number>(0)
   const hasNotifiedRef = useRef(false)
+  const onPulsesStartRef = useRef(onPulsesStart)
+
+  useEffect(() => {
+    onPulsesStartRef.current = onPulsesStart
+  }, [onPulsesStart])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -680,7 +684,10 @@ export default function GraphAnimation({
 
         const allNodesGrown = nodes.every((n) => n.growProgress >= 1)
         const allEdgesGrown = edges.every((e) => e.growProgress >= 1)
-        if (elapsed >= CONFIG.growthDuration || (allNodesGrown && allEdgesGrown)) {
+        if (
+          elapsed >= CONFIG.growthDuration ||
+          (allNodesGrown && allEdgesGrown)
+        ) {
           state.isGrowing = false
           nodes.forEach((n) => (n.growProgress = 1))
           edges.forEach((e) => (e.growProgress = 1))
@@ -721,7 +728,6 @@ export default function GraphAnimation({
         color,
         isDark,
         destructionFade,
-        centerGlow,
       } = state
       const { width, height } = CONFIG.canvas
 
@@ -770,7 +776,7 @@ export default function GraphAnimation({
         const opacity =
           fadeIn * (1 - node.destructionProgress) * globalOpacity * 0.8
 
-        drawNode(ctx, node, rgba(nodeColor, opacity), opacity)
+        drawNode(ctx, node, rgba(nodeColor, opacity))
       }
 
       // Explosions
@@ -853,7 +859,7 @@ export default function GraphAnimation({
         lastPulse = time
         if (!hasNotifiedRef.current) {
           hasNotifiedRef.current = true
-          onPulsesStart?.()
+          onPulsesStartRef.current?.()
         }
       }
 

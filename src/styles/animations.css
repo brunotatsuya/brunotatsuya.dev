@@ -82,7 +82,6 @@
     hand-underline-jitter 1.4s steps(1) 760ms infinite;
 }
 
-
 @keyframes hand-underline-draw {
   from {
     transform: rotate(var(--hand-underline-rotate)) scaleX(0);
@@ -100,19 +99,24 @@
     transform: rotate(var(--hand-underline-rotate)) scaleX(1) translate(0, 0);
   }
   18% {
-    transform: rotate(calc(var(--hand-underline-rotate) + 0.3deg)) scaleX(1) translate(0.02em, 0.01em);
+    transform: rotate(calc(var(--hand-underline-rotate) + 0.3deg)) scaleX(1)
+      translate(0.02em, 0.01em);
   }
   32% {
-    transform: rotate(calc(var(--hand-underline-rotate) - 0.25deg)) scaleX(1) translate(-0.01em, 0.02em);
+    transform: rotate(calc(var(--hand-underline-rotate) - 0.25deg)) scaleX(1)
+      translate(-0.01em, 0.02em);
   }
   46% {
-    transform: rotate(calc(var(--hand-underline-rotate) + 0.2deg)) scaleX(1) translate(0.01em, -0.01em);
+    transform: rotate(calc(var(--hand-underline-rotate) + 0.2deg)) scaleX(1)
+      translate(0.01em, -0.01em);
   }
   62% {
-    transform: rotate(calc(var(--hand-underline-rotate) - 0.15deg)) scaleX(1) translate(-0.02em, 0);
+    transform: rotate(calc(var(--hand-underline-rotate) - 0.15deg)) scaleX(1)
+      translate(-0.02em, 0);
   }
   78% {
-    transform: rotate(calc(var(--hand-underline-rotate) + 0.2deg)) scaleX(1) translate(0, 0.02em);
+    transform: rotate(calc(var(--hand-underline-rotate) + 0.2deg)) scaleX(1)
+      translate(0, 0.02em);
   }
   100% {
     transform: rotate(var(--hand-underline-rotate)) scaleX(1) translate(0, 0);
