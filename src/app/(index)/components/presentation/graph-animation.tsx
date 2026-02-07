@@ -440,7 +440,13 @@ const drawEdgeFade = (ctx: CanvasRenderingContext2D): void => {
 
 // Main Component
 
-export default function GraphAnimation({ className }: { className?: string }) {
+export default function GraphAnimation({
+  className,
+  onPulsesStart,
+}: {
+  className?: string
+  onPulsesStart?: () => void
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const stateRef = useRef<AnimationState>({
     nodes: [],
@@ -456,6 +462,7 @@ export default function GraphAnimation({ className }: { className?: string }) {
     isDark: true,
   })
   const animationRef = useRef<number>(0)
+  const hasNotifiedRef = useRef(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -671,7 +678,9 @@ export default function GraphAnimation({ className }: { className?: string }) {
           )
         })
 
-        if (elapsed >= CONFIG.growthDuration) {
+        const allNodesGrown = nodes.every((n) => n.growProgress >= 1)
+        const allEdgesGrown = edges.every((e) => e.growProgress >= 1)
+        if (elapsed >= CONFIG.growthDuration || (allNodesGrown && allEdgesGrown)) {
           state.isGrowing = false
           nodes.forEach((n) => (n.growProgress = 1))
           edges.forEach((e) => (e.growProgress = 1))
@@ -842,6 +851,10 @@ export default function GraphAnimation({ className }: { className?: string }) {
       ) {
         spawnPulse()
         lastPulse = time
+        if (!hasNotifiedRef.current) {
+          hasNotifiedRef.current = true
+          onPulsesStart?.()
+        }
       }
 
       update(dt, time)

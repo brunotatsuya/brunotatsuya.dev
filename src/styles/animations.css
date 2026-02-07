@@ -33,3 +33,88 @@
     transform: translateY(-4px);
   }
 }
+
+.hand-underline {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+.hand-underline::before,
+.hand-underline::after {
+  content: '';
+  position: absolute;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: -0.2em;
+  height: 0.26em;
+  background: var(--primary);
+  border-radius: 999px;
+  opacity: 0.8;
+  --hand-underline-rotate: -1.4deg;
+  transform: rotate(var(--hand-underline-rotate)) scaleX(0);
+  transform-origin: left center;
+  z-index: -1;
+}
+
+.hand-underline::before {
+  bottom: -0.08em;
+  left: -0.14em;
+  right: auto;
+  width: 0.9em;
+  height: 0.16em;
+  opacity: 0.65;
+  --hand-underline-rotate: 6deg;
+  transform: rotate(var(--hand-underline-rotate)) scaleX(0);
+  transform-origin: left center;
+}
+
+.hand-underline--draw::before,
+.hand-underline--draw::after {
+  animation:
+    hand-underline-draw 900ms ease-out 120ms both,
+    hand-underline-jitter 1.6s steps(1) 900ms infinite;
+}
+
+.hand-underline--draw::before {
+  animation:
+    hand-underline-draw 750ms ease-out 40ms both,
+    hand-underline-jitter 1.4s steps(1) 760ms infinite;
+}
+
+
+@keyframes hand-underline-draw {
+  from {
+    transform: rotate(var(--hand-underline-rotate)) scaleX(0);
+  }
+  55% {
+    transform: rotate(var(--hand-underline-rotate)) scaleX(1.05);
+  }
+  to {
+    transform: rotate(var(--hand-underline-rotate)) scaleX(1);
+  }
+}
+
+@keyframes hand-underline-jitter {
+  0% {
+    transform: rotate(var(--hand-underline-rotate)) scaleX(1) translate(0, 0);
+  }
+  18% {
+    transform: rotate(calc(var(--hand-underline-rotate) + 0.3deg)) scaleX(1) translate(0.02em, 0.01em);
+  }
+  32% {
+    transform: rotate(calc(var(--hand-underline-rotate) - 0.25deg)) scaleX(1) translate(-0.01em, 0.02em);
+  }
+  46% {
+    transform: rotate(calc(var(--hand-underline-rotate) + 0.2deg)) scaleX(1) translate(0.01em, -0.01em);
+  }
+  62% {
+    transform: rotate(calc(var(--hand-underline-rotate) - 0.15deg)) scaleX(1) translate(-0.02em, 0);
+  }
+  78% {
+    transform: rotate(calc(var(--hand-underline-rotate) + 0.2deg)) scaleX(1) translate(0, 0.02em);
+  }
+  100% {
+    transform: rotate(var(--hand-underline-rotate)) scaleX(1) translate(0, 0);
+  }
+}
