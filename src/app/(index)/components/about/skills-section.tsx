@@ -1,6 +1,6 @@
 'use client'
 
-import LogoLoop, { type LogoItem } from '@/components/LogoLoop'
+import LogoLoop, { type LogoItem } from '@/components/ui/logo-loop'
 
 export function SkillsSection({
   title,

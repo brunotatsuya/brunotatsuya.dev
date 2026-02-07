@@ -2,7 +2,7 @@
 
 import { Trans, useTranslation } from 'react-i18next'
 
-import { BlurReveal, BlurRevealItem } from '@/components/blur-reveal'
+import { BlurReveal, BlurRevealItem } from '@/components/ui/blur-reveal'
 
 import { SkillsGrid } from './skills-grid'
 

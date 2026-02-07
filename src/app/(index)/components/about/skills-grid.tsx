@@ -2,15 +2,11 @@
 
 import { useTranslation } from 'react-i18next'
 
-import { type LogoItem } from '@/components/LogoLoop'
+import { type LogoItem } from '@/components/ui/logo-loop'
 
 import { SkillLabel } from './skill-label'
 import { SkillsSection } from './skills-section'
-import {
-  infraSkills,
-  programmingSkills,
-  toolsSkills,
-} from './skills'
+import { infraSkills, programmingSkills, toolsSkills } from './skills'
 
 const sections = [
   {
