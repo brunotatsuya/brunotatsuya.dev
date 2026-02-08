@@ -26,7 +26,7 @@ export function SkillsSection({
         fadeOut
         fadeOutColor="var(--background)"
         ariaLabel={`${title} logos`}
-        className="bg-background overflow-hidden rounded-2xl px-0.5 py-2"
+        className="bg-background pointer-events-none overflow-hidden rounded-2xl px-0.5 py-2 md:pointer-events-auto"
       />
     </div>
   )
