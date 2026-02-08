@@ -14,13 +14,16 @@
     },
     "about": {
       "eyebrow": "Sobre",
-      "title": "olá",
-      "description": "Oi, eu sou o <strong>Bruno</strong>! Sou desenvolvedor de software e cientista da computação com 6 anos de experiência, baseado na França. Também sou entusiasta em automação. Atualmente trabalho como Engenheiro de Software na <qonto>Qonto</qonto> e acredito que a tecnologia deve ser usada para tornar a vida das pessoas mais fácil.",
+      "title": "Confiabilidade com propósito",
+      "description": "Sou o <strong>Bruno</strong>, engenheiro de software e cientista da computação com mais de 7 anos criando plataformas cloud-native em fintech e produtos B2B. Baseado na Europa e atualmente na <qonto>Qonto</qonto>, foco em fundamentos de confiabilidade, limites claros de domínio e impacto mensurável para escalar sem travar os times.",
       "tabs": {
         "programming": "Programação",
         "tools": "Soluções",
         "infra": "DevOps"
       }
     }
+  },
+  "footer": {
+    "credit": "Projetado e construído por <name>Bruno Tatsuya</name> © 2026"
   }
 }

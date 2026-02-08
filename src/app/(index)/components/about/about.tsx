@@ -19,8 +19,8 @@ export function About() {
             {t('index.about.eyebrow')}
           </span>
           <BlurRevealItem
-            as="h2"
-            className="font-sans text-4xl font-semibold tracking-tight md:text-5xl"
+            as="h3"
+            className="font-sans text-2xl font-semibold tracking-tight md:text-3xl"
           >
             {t('index.about.title')}
           </BlurRevealItem>

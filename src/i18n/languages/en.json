@@ -14,13 +14,16 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "Hello there",
-      "description": "Hi, I'm <strong>Bruno</strong>! I'm a software developer and computer scientist with 6 years of experience, based in France. Also an enthusiast in automation. Currently working as a Software Engineer at <qonto>Qonto</qonto>, I believe technology should be used to make people's lives easier.",
+      "title": "Reliability with intent",
+      "description": "I'm <strong>Bruno</strong>, a backend engineer and computer scientist with 7+ years building cloud-native platforms across fintech and B2B products. EU-based and currently at <qonto>Qonto</qonto>, I focus on reliability foundations, clear domain boundaries, and measurable business impact so products scale without slowing teams down.",
       "tabs": {
         "programming": "Programming",
         "tools": "Solutions",
         "infra": "DevOps"
       }
     }
+  },
+  "footer": {
+    "credit": "Designed and built by <name>Bruno Tatsuya</name> © 2026"
   }
 }

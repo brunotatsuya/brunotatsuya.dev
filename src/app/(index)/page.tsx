@@ -1,4 +1,5 @@
 import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 import { About } from './components/about/about'
 import { Presentation } from './components/presentation/presentation'
 
@@ -10,6 +11,7 @@ export default function Home() {
         <Presentation />
         <About />
       </main>
+      <Footer />
     </div>
   )
 }
