@@ -1,10 +1,7 @@
 {
   "navbar": {
     "title": "brunotatsuya.dev",
-    "about": "Sobre",
-    "contact": "Contato",
-    "resume": "CV",
-    "openMenu": "Abrir menu"
+    "resume": "CV"
   },
   "index": {
     "presentation": {
@@ -14,8 +11,8 @@
     },
     "about": {
       "eyebrow": "Sobre",
-      "title": "Confiabilidade com propósito",
-      "description": "Sou o <strong>Bruno</strong>, engenheiro de software e cientista da computação com mais de 7 anos criando plataformas cloud-native em fintech e produtos B2B. Baseado na Europa e atualmente na <qonto>Qonto</qonto>, foco em fundamentos de confiabilidade, limites claros de domínio e impacto mensurável para escalar sem travar os times.",
+      "title": "Construir com propósito",
+      "description": "Sou <strong>Bruno</strong>, um engenheiro de software e cientista da computação com mais de 7 anos de experiência construindo sistemas confiáveis e escaláveis. Baseado na França e atualmente trabalhando como Backend Engineer na <qonto>Qonto</qonto>, meu foco é construir tecnologia que remove atritos e melhora a vida das pessoas.",
       "tabs": {
         "programming": "Programação",
         "tools": "Soluções",
@@ -24,11 +21,11 @@
     }
   },
   "footer": {
-    "credit": "Projetado e construído por <name>Bruno Tatsuya</name> © 2026"
+    "credit": "Desenhado e desenvolvido por <name>Bruno Tatsuya</name> © 2026"
   },
   "notFound": {
     "eyebrow": "404 — página não encontrada",
-    "title": "Esta rota saiu do mapa.",
+    "title": "Você saiu do mapa.",
     "description": "A página que você procurava não existe ou mudou de lugar."
   }
 }

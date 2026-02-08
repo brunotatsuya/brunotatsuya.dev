@@ -1,10 +1,7 @@
 {
   "navbar": {
     "title": "brunotatsuya.dev",
-    "about": "About",
-    "contact": "Contact",
-    "resume": "Resume",
-    "openMenu": "Open menu"
+    "resume": "Resume"
   },
   "index": {
     "presentation": {
@@ -14,8 +11,8 @@
     },
     "about": {
       "eyebrow": "About",
-      "title": "Reliability with intent",
-      "description": "I'm <strong>Bruno</strong>, a backend engineer and computer scientist with 7+ years building cloud-native platforms across fintech and B2B products. EU-based and currently at <qonto>Qonto</qonto>, I focus on reliability foundations, clear domain boundaries, and measurable business impact so products scale without slowing teams down.",
+      "title": "Build with intent",
+      "description": "I'm <strong>Bruno</strong>, a software engineer and computer scientist with over 7 years of experience building reliable, scalable systems. Based in France and currently working as a Backend Engineer at <qonto>Qonto</qonto>, I focus on building technology that removes friction and improves people's lives.",
       "tabs": {
         "programming": "Programming",
         "tools": "Solutions",
@@ -28,7 +25,7 @@
   },
   "notFound": {
     "eyebrow": "404 — page not found",
-    "title": "This route drifted off the map.",
+    "title": "You've drifted off the map.",
     "description": "The page you were looking for doesn’t exist or has moved."
   }
 }
