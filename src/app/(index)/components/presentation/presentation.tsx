@@ -7,8 +7,8 @@ export function Presentation() {
   const { t } = useTranslation()
 
   return (
-    <section className="relative min-h-dvh">
-      <div className="relative z-10 mx-auto flex min-h-dvh w-full max-w-6xl flex-col justify-start px-8 md:h-auto md:flex-row md:items-center md:justify-start md:gap-16 md:px-12 lg:px-16">
+    <section className="relative min-h-svh">
+      <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-6xl flex-col justify-start px-8 md:h-auto md:flex-row md:items-center md:justify-start md:gap-16 md:px-12 lg:px-16">
         {/* Animation - first on mobile, cropped height, capped at 50% of viewport on non-mobile */}
         <div className="relative order-1 mt-14 flex h-48 w-full shrink-0 items-center justify-center overflow-hidden md:order-2 md:mt-10 md:h-auto md:max-h-95 md:w-auto md:flex-1 md:justify-end md:overflow-visible">
           <GraphAnimation className="w-full md:w-full md:max-w-95" />
