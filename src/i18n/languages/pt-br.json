@@ -25,5 +25,10 @@
   },
   "footer": {
     "credit": "Projetado e construído por <name>Bruno Tatsuya</name> © 2026"
+  },
+  "notFound": {
+    "eyebrow": "404 — página não encontrada",
+    "title": "Esta rota saiu do mapa.",
+    "description": "A página que você procurava não existe ou mudou de lugar."
   }
 }

@@ -25,5 +25,10 @@
   },
   "footer": {
     "credit": "Designed and built by <name>Bruno Tatsuya</name> © 2026"
+  },
+  "notFound": {
+    "eyebrow": "404 — page not found",
+    "title": "This route drifted off the map.",
+    "description": "The page you were looking for doesn’t exist or has moved."
   }
 }
