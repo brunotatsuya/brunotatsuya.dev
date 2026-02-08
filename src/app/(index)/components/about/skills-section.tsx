@@ -1,5 +1,3 @@
-'use client'
-
 import LogoLoop, { type LogoItem } from '@/components/ui/logo-loop'
 
 export function SkillsSection({
