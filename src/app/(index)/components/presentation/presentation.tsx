@@ -30,9 +30,7 @@ export function Presentation() {
                 i18nKey="index.presentation.description"
                 components={{
                   underline: (
-                    <span
-                      className="hand-underline hand-underline--draw"
-                    />
+                    <span className="hand-underline hand-underline--draw" />
                   ),
                 }}
               />

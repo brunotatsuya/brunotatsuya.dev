@@ -20,7 +20,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-muted-foreground transition-colors duration-300 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/40 focus-visible:ring-offset-background transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             <Github className="size-4" />
           </Link>
@@ -29,14 +29,14 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-muted-foreground transition-colors duration-300 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/40 focus-visible:ring-offset-background transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             <Linkedin className="size-4" />
           </Link>
           <Link
             href="mailto:brunomasunaga@gmail.com"
             aria-label="Email"
-            className="text-muted-foreground transition-colors duration-300 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="text-muted-foreground hover:text-foreground focus-visible:ring-ring/40 focus-visible:ring-offset-background transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             <Mail className="size-4" />
           </Link>
