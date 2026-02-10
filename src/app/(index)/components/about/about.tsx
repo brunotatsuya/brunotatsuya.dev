@@ -11,9 +11,9 @@ export function About() {
   return (
     <section
       id="about"
-      className="bg-background relative min-h-svh scroll-mt-4 font-mono"
+      className="bg-background relative scroll-mt-4 font-mono pb-16 md:pb-20"
     >
-      <div className="relative mx-auto flex min-h-svh w-full max-w-6xl flex-col gap-12 px-8 pt-14 pb-16 md:flex-row md:items-start md:gap-20 md:px-12 md:pt-24 md:pb-20 lg:px-16">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-8 pt-14 md:flex-row md:items-start md:gap-20 md:px-12 md:pt-24 lg:px-16">
         <BlurReveal className="flex flex-col gap-6 md:w-6/12">
           <span className="text-muted-foreground text-xs tracking-[0.3em] uppercase">
             {t('index.about.eyebrow')}
